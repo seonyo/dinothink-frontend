@@ -59,8 +59,20 @@
     font-weight: 400;
 }
 
+.image-div {
+    margin: 2vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.think {
+    width: 30%;
+    z-index: 0;
+}
+
 .ideas {
-    margin: 28vh 0 0 0;
+    margin: 2vh 0 0 0;
 }
 
 .idea-container {
