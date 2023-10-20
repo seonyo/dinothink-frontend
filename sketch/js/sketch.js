@@ -42,7 +42,7 @@ sendButton.onclick = () => {
             chatDiv.style.display = 'flex';
             chatFieldBox.style.display = 'flex';
 
-            if (index === 7) {
+            if (index === 8) {
                 chatFieldBox.style.display = 'none';
                 document.getElementsByClassName('color-container')[0].style.display = 'flex';
             } else {
@@ -90,8 +90,8 @@ function postIdea(ideaList) {
         q6: ideaList[6],
         checking: 0,
         memo: "",
-        title: "",
-        color: ideaList[7]
+        title: ideaList[7],
+        color: ideaList[8]
     };
     axios.post('http://localhost:3000/idea', idea)
     .then(response => {
