@@ -15,7 +15,7 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
         console.log(data);
         data.forEach(element => {
             main.innerHTML += `
-            <div class="idea-container">
+            <div class="idea-container" onclick="window.open('/idea/?value=${element.id}', '_top')">
                 <div class="idea-title">${element.title}</div>
                 <div class="idea-progress">
                     <img src="../images/progress${element.checking}.png" alt="">

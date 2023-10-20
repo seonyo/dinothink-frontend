@@ -1,5 +1,4 @@
-// let id = localStorage.getItem("id");
-let id = 3;
+let id = localStorage.getItem("id");
 let userid;
 let username = document.getElementById("name");
 
