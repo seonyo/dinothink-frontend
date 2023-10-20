@@ -6,7 +6,7 @@ addIdeaContainer.onclick = () => {
     window.open('/sketch', '_top');
 };
 
-let id = new URL(location.href).searchParams.get('id');
+let id = localStorage.getItem('id');
 
 
 axios.get(`http://192.168.11.206:3000/idea/${id}`)
