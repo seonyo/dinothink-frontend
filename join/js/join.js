@@ -17,6 +17,7 @@ submitButton.onclick = () => {
     axios.post('http://192.168.11.206:3000/user', userData)
     .then(response => {
         console.log('Registration successful:', response.data);
+        window.open('/login', '_top');
     })
     .catch(error => {
         console.error('Registration failed:', error);
