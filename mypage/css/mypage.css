@@ -1,0 +1,44 @@
+.myInfo{
+    margin-top: 78px;
+    margin-left: 20px;
+    display: flex;
+}
+
+.myInfo img{
+    width: 60px;
+    height: 60px;
+}
+
+.nameInfo{
+    margin-top: 4px;
+    margin-left: 16px;
+}
+
+#name{
+    font-size: 20px;
+    color: #2B2B2B;
+}
+
+#updateInfo{
+    color: #AEAEAE;
+    font-size: 12px;
+}
+
+.arrow{
+    margin-top: 18px;
+    margin-left: 170px;
+}
+.arrow img{
+    width: 24px;
+    height: 24px;
+}
+hr {
+    border: 1px solid #E1E1E1; 
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .contentItem{
+    display: flex;
+  }
