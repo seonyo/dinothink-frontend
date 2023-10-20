@@ -1,0 +1,48 @@
+#main {
+    width: 100%;
+    margin: 4vh 20px 90px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.idea-container {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-500, #D9D9D9);
+    background: var(--white, #FFF);
+
+    cursor: pointer;
+}
+
+.idea-progress {
+    width: 40px;
+    height: 40px;
+}
+
+.idea-container > img {
+    object-fit: contain;
+}
+
+.add-idea-container {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px;
+
+    border-radius: 8px;
+    background: var(--primary, #7ACEDA);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.add-idea-container > iconify-icon {
+    font-size: 1.4rem;
+}
+
