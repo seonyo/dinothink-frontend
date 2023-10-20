@@ -15,11 +15,12 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
     .then((response) => {
         let size = response.data.results.length;
 
+        console.log(response);
         userid = response.data.result[0].name;
         title = response.data.results[size - 1].title;
         category = response.data.results[size - 1].q1;
         q2 = response.data.results[size - 1].q2;
-        PK = response.data.results[size - 1].id;
+        PK = response.data.results[size-1].id;
 
         mainLabel.innerHTML = userid + "님의 아이디어 발자국";
         ideaTitle.innerHTML = title;
@@ -30,10 +31,17 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
         let ideasContainer = document.getElementById("ideas");
 
         if (size > 1) {
-            for (let i = size - 1; i >= 0; i--) {
+            for (let i = size - 2; i >= 0; i--) {
                 const idea = response.data.results[i];
+                console.log(idea);
                 const ideaContainer = document.createElement("div");
                 ideaContainer.classList.add("idea-container");
+                ideaContainer.setAttribute("value", idea.id);
+                ideaContainer.addEventListener("click", function (event) {
+                    const value = event.currentTarget.getAttribute("value");
+                    console.log(value)
+                    window.open(`/idea/?value=${value}`);
+                });
 
                 const ideaTitle = document.createElement("div");
                 ideaTitle.classList.add("idea-title");
@@ -48,10 +56,6 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
 
                 ideasContainer.appendChild(ideaContainer);
 
-                ideaContainer.addEventListener("click", function (event) {
-                    const value = idea.id-1; 
-                    window.open(`/idea/?value=${value}`)
-                });
             }
         }
 
@@ -60,9 +64,12 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
         console.error(error);
     });
 
-document.querySelector(".main-idea-container").addEventListener("click", function (event) {
+
+document.querySelector(".idea-header").addEventListener("click", function (event) {
     const value = event.currentTarget.value;
+    console.log(value)
     window.open(`/idea/?value=${value}`)
 });
+
 
 
