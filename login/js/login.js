@@ -16,6 +16,7 @@ submitButton.onclick = () => {
                 const localStorage = this.localStorage;
                 localStorage.setItem('id', element.id);
                 console.log(localStorage.getItem('id'));
+                window.open('/home', '_top');
             }
         });
     }).catch((err) => {
