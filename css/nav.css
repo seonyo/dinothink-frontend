@@ -1,0 +1,31 @@
+#nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background-color: var(--primary);
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    margin: 3px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    color: var(--white, #FFF);
+    text-align: center;
+
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+
+.nav-menu-label {
+    font-size: 0.7rem;
+}
+
