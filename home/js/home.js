@@ -11,7 +11,8 @@ let ideaTitle = document.getElementById("idea-title");
 let ideaCategory = document.getElementById("idea-category");
 let ideaQ2 = document.getElementById("q2");
 
-axios.get(`http://192.168.11.206:3000/idea/${id}`)
+
+axios.get(`http://localhost:3000/idea/${id}`)
     .then((response) => {
         let size = response.data.results.length;
 
@@ -22,6 +23,7 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
         q2 = response.data.results[size - 1].q2;
         PK = response.data.results[size-1].id;
 
+        ideaCategory.style.background = response.data.results[size-1].color;
         mainLabel.innerHTML = userid + "님의 아이디어 발자국";
         ideaTitle.innerHTML = title;
         ideaCategory.innerHTML = category;
@@ -50,7 +52,7 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
                 const ideaCategory = document.createElement("div");
                 ideaCategory.classList.add("idea-category");
                 ideaCategory.innerText = idea.q1;
-
+                ideaCategory.style.background = idea.color;
                 ideaContainer.appendChild(ideaTitle);
                 ideaContainer.appendChild(ideaCategory);
 
@@ -68,7 +70,7 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
 document.querySelector(".idea-header").addEventListener("click", function (event) {
     const value = event.currentTarget.value;
     console.log(value)
-    window.open(`/idea/?value=${value}`)
+    window.open(`/idea/?value=${value}`, '_top')
 });
 
 

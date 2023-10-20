@@ -6,7 +6,7 @@ submitButton.onclick = () => {
     let id = idField.value;
     let pw = pwFeild.value;
 
-    axios.get('http://192.168.11.206:3000/user')
+    axios.get('http://localhost:3000/user')
     .then((response) => {
         console.log(response);
         let data = response.data;

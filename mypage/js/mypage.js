@@ -2,7 +2,7 @@ let id = localStorage.getItem("id");
 let userid;
 let username = document.getElementById("name");
 
-axios.get(`http://192.168.11.206:3000/idea/${id}`)
+axios.get(`http://localhost:3000/idea/${id}`)
     .then((response) => {
         console.log(response);
         userid = response.data.result[0].name;

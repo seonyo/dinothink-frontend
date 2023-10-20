@@ -9,7 +9,7 @@ addIdeaContainer.onclick = () => {
 let id = localStorage.getItem('id');
 
 
-axios.get(`http://192.168.11.206:3000/idea/${id}`)
+axios.get(`http://localhost:3000/idea/${id}`)
     .then((response) => {
         let data = response.data.results;
         console.log(data);
