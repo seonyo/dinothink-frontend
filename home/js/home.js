@@ -1,5 +1,5 @@
 // let id = localStorage.getItem("id");
-let id = 3;
+let id = localStorage.getItem('id');
 let userid;
 let title;
 let category;
@@ -50,13 +50,7 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
 
                 ideaContainer.addEventListener("click", function (event) {
                     const value = idea.id-1; 
-                    
-                    const baseUrl = "http://192.168.11.206:3000/idea/";
-
-                    const url = new URL(baseUrl);
-                    url.searchParams.append("value", value);
-                    
-                    window.location.href=url;
+                    window.open(`/idea/?value=${value}`)
                 });
             }
         }
@@ -66,15 +60,9 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
         console.error(error);
     });
 
-document.querySelector(".idea-header").addEventListener("click", function (event) {
+document.querySelector(".main-idea-container").addEventListener("click", function (event) {
     const value = event.currentTarget.value;
-
-      const baseUrl = "http://192.168.11.206:3000/idea/";
-
-      const url = new URL(baseUrl);
-      url.searchParams.append("value", value);
-      
-      window.location.href=url;
+    window.open(`/idea/?value=${value}`)
 });
 
 
