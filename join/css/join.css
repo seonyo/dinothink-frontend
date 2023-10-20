@@ -62,3 +62,10 @@ a {
     font-size: 0.8rem;
     font-weight: 400;
 }
+
+.error-msg {
+    display: none;
+    color: red;
+    font-size: 0.6rem;
+    font-weight: 200;
+}

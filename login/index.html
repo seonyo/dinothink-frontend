@@ -12,11 +12,13 @@
         <div class="title-label">로그인</div>
         <div class="field-container">
             <div class="field-label">아이디</div>
-            <input type="text" name="userid" id="userid" placeholder="6~12자 이내, 영문, 숫자 사용가능" class="field-input">
+            <input type="text" name="userid" id="userid" placeholder="" class="field-input">
+            <div class="error-msg">존재하지 않는 비밀번호 입니다.</div>
         </div>
         <div class="field-container">
             <div class="field-label">비밀번호</div>
-            <input type="password" name="userpw" id="userpw" placeholder="8자 이상, 문자/숫자/기호 사용가능" class="field-input">
+            <input type="password" name="userpw" id="userpw" placeholder="" class="field-input">
+            <div class="error-msg">비밀번호가 알맞지 않습니다.</div>
         </div>
         <button id="submit" class="main-button">확인</button>
         <a href="#">아이디 / 비밀번호를 분실하셨나요?</a>

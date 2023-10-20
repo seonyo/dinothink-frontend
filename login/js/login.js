@@ -17,7 +17,11 @@ submitButton.onclick = () => {
                 localStorage.setItem('id', element.id);
                 console.log(localStorage.getItem('id'));
                 window.open('/home/?userid=' + element.id, '_top');
+                return;
             }
+            
+            idField.style.borderColor = 'red';
+            pwFeild.style.borderColor = 'red';
         });
     }).catch((err) => {
         console.log(err);
