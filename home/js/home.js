@@ -47,6 +47,17 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
                 ideaContainer.appendChild(ideaCategory);
 
                 ideasContainer.appendChild(ideaContainer);
+
+                ideaContainer.addEventListener("click", function (event) {
+                    const value = idea.id-1; 
+                    
+                    const baseUrl = "http://192.168.11.206:3000/idea/";
+
+                    const url = new URL(baseUrl);
+                    url.searchParams.append("value", value);
+                    
+                    window.location.href=url;
+                });
             }
         }
 
@@ -58,5 +69,12 @@ axios.get(`http://192.168.11.206:3000/idea/${id}`)
 document.querySelector(".idea-header").addEventListener("click", function (event) {
     const value = event.currentTarget.value;
 
+      const baseUrl = "http://192.168.11.206:3000/idea/";
+
+      const url = new URL(baseUrl);
+      url.searchParams.append("value", value);
+      
+      window.location.href=url;
 });
+
 
