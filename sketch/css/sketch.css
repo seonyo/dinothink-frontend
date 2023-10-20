@@ -88,5 +88,43 @@ body {
     color: var(--white);
 }
 
+.color-container {
+    margin: 0 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: fit-content;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: var(--gray-100, #F7F7F7);
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#blue {
+    background-color: rgba(131, 216, 235, 1);
+}
+
+#purple {
+    background-color: rgba(208, 131, 235, 1);
+}
+
+#green {
+    background-color: rgba(164, 235, 131, 1);
+}
+
+#orange {
+    background-color: rgba(255, 186, 105, 1);
+}
+
+#red {
+    background-color: rgba(255, 105, 105, 1);
+}
 
 
