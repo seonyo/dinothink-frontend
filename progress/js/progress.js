@@ -18,7 +18,7 @@ axios.get(`http://localhost:3000/idea/${id}`)
             <div class="idea-container" onclick="window.open('/idea/?value=${element.id}', '_top')">
                 <div class="idea-title">${element.title}</div>
                 <div class="idea-progress">
-                    <img src="../images/progress${element.checking}.png" alt="">
+                    <img src="../images/progress${element.checking}.svg" alt="">
                 </div>
             </div>
             `;
