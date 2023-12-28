@@ -14,7 +14,7 @@ submitButton.onclick = () => {
     axios.post('http://localhost:3000/login', userData)
     .then((response) => {
         console.log(response);
-        window.open('/home/?userid=' + element.id, '_top');
+        window.open('/home/?userid=' + id, '_top');
     }).catch((err) => {
         console.log(err);
         if(err.response.status == 404){
