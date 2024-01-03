@@ -22,7 +22,7 @@ submitButton.onclick = () => {
         userid: id,
         userpw: pw
     }
-    axios.post('http://localhost:3000/user', userData)
+    axios.post('http://localhost:3000/auth/user', userData)
     .then(response => {
         console.log('Registration successful:', response.data);
         window.open('/login', '_top');

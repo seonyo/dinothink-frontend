@@ -12,7 +12,7 @@ let ideaCategory = document.getElementById("idea-category");
 let ideaQ2 = document.getElementById("q2");
 
 
-axios.get(`http://localhost:3000/idea/${id}`)
+axios.get(`http://localhost:3000/idea/view/${id}`)
     .then((response) => {
         let size = response.data.results.length;
 

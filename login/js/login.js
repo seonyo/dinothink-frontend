@@ -11,7 +11,7 @@ submitButton.onclick = () => {
         userpw : pw
     }
 
-    axios.post('http://localhost:3000/login', userData)
+    axios.post('http://localhost:3000/auth/login', userData)
     .then((response) => {
         console.log(response);
         window.open('/home/?userid=' + id, '_top');

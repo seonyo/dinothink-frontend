@@ -28,7 +28,7 @@ axios.get(`http://localhost:3000/idea/${id}`)
 prSelect.onchange = () => {
     idea.checking = parseInt(prSelect.value);
     console.log(idea);
-    axios.put(`http://localhost:3000/idea/${id}`, idea)
+    axios.put(`http://localhost:3000/idea/view/${id}`, idea)
         .then((response) => {
             console.log(response);
         })

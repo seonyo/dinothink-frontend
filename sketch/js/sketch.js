@@ -93,7 +93,7 @@ function postIdea(ideaList) {
         title: ideaList[7],
         color: ideaList[8]
     };
-    axios.post('http://localhost:3000/idea', idea)
+    axios.post('http://localhost:3000/write', idea)
     .then(response => {
         console.log('Registration successful:', response.data);
         window.open('/home', '_top');

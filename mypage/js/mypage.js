@@ -13,3 +13,11 @@ axios.get(`http://localhost:3000/idea/${id}`)
     .catch((error) => {
         console.error(error);
     });
+
+
+    axios.get(`http://localhost:3000/auth/check-login`)
+    .then((response) => {
+        console.log(response);
+    }).catch((error) => {
+        console.log(error);
+    });
